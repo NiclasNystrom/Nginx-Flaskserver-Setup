@@ -16,4 +16,4 @@ if __name__ == "__main__":
 		_port=sys.argv[1]
 	else:
 		_port=randint(10000,10100)
-	app.run(port=_port)
+	app.run(host="0.0.0.0",port=_port)

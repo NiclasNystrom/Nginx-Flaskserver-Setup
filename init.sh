@@ -10,7 +10,7 @@
 # Start servers (e.g. dummy.sh)
 # sudo bash init (Config nginx with servers)
 # host:80 -> servers
-# Remark: Change ports in ports.txt and host in variable host below.
+# Remark: Change ports in ports.txt and host in host.txt (e.g. amazon dns adress)
 
 
 
@@ -49,7 +49,7 @@ echo "Linking sa"
 echo "... ok"
 
 
-host="localhost";
+host="$(cat host.txt)";
 
 # Load all ports and build line to insert into load-balance.config
 loadBalanceHosts="";
