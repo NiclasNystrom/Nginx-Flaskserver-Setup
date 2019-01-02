@@ -1,0 +1,13 @@
+server {
+	listen 15100;
+	listen [::]:15100;
+
+	root /var/www/server1/html;
+	index index.html index.htm index.nginx-debian.html;
+
+	server_name server1 http://localhost:15100;
+
+	location / {
+		try_files $uri $uri/ = 404;
+	}
+}

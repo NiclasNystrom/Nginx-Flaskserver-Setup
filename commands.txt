@@ -1,0 +1,26 @@
+Get Server adress for Nginx. Replace enp0s3 with your adapter.
+ip addr show enp0s3 | grep inet | awk '{ print $2; }' | sed 's/\/-*$//'
+
+alt
+curl -4 icanhazip.com
+
+
+
+
+Nginx
+
+stop
+sudo systemctl stop nginx
+
+start
+sudo systemctl start nginx
+
+restart
+sudo systemctl restart nginx
+
+reload/apply changes in config
+sudo systemctl reload nginx
+
+
+
+
